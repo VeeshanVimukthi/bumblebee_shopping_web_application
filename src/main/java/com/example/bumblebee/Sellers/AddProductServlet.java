@@ -4,6 +4,7 @@ import com.example.bumblebee.DBConnection;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.PrintWriter;
 import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -72,7 +73,15 @@ public class AddProductServlet extends HttpServlet {
             e.printStackTrace();
         }
 
+        // display success message in alert box
+        response.setContentType("text/html;charset=UTF-8");
+        response.getWriter().write("<script>alert('Product added successfully!')</script>");
+
+        // display success message in alert box
+//        response.setContentType("text/html;charset=UTF-8");
+//        response.getWriter().write("<script>alert('Product added successfully!')</script>");
+
         // redirect to product list page
-        response.sendRedirect("login.jsp");
+        response.sendRedirect("./Admin/insert.jsp");
     }
 }

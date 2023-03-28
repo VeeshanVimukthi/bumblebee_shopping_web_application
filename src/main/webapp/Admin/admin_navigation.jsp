@@ -74,20 +74,19 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="#">Dashboard</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Orders</a>
-                    </li>
-
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Products
                         </a>
                         <div class="dropdown-menu" aria-labelledby="productsDropdown">
-                            <a class="dropdown-item" href="insert.jsp">Product 1</a>
-                            <a class="dropdown-item" href="update.jsp">Product 2</a>
-                            <a class="dropdown-item" href="Delete.jsp">Product 3</a>
+                            <a class="dropdown-item" href="insert.jsp">Insert Item</a>
+                            <a class="dropdown-item" href="update.jsp">Update </a>
+                            <a class="dropdown-item" href="Delete.jsp">Delete</a>
                         </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Orders</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Customers</a>
