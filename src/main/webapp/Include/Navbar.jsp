@@ -14,6 +14,7 @@
 <%--    <link rel="stylesheet" href="https://kit.fontawesome.com/c6b5381962.css" crossorigin="anonymous">--%>
 
 
+
     <style>
         .avatar {
             display: inline-block;
@@ -36,6 +37,7 @@
     </style>
 </head>
 <body>
+
 
 
 <section class="nav sticky-top">
@@ -61,7 +63,7 @@
                         <a class="nav-link" href="About.jsp">About us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Brands</a>
+                        <a class="nav-link" href="./Admin/admin_navigation.jsp">Brands</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Contact.jsp">Contact Us</a>
@@ -94,20 +96,28 @@
 <%--                        <a class="nav-link" href="#">Sign Out</a>--%>
 <%--                    </li>--%>
                     <li class="nav-item">
-                        <%
-                            String username = (String) session.getAttribute("username");
-                            char firstLetter = username.charAt(0);
-                        %>
-                        <div class="avatar"><%= firstLetter %>
+<%--                        <%--%>
+<%--                            String username = (String) session.getAttribute("username");--%>
+<%--                            char firstLetter = username.charAt(0);--%>
+<%--                        %>--%>
 
-                        </div>
+<%--                        <div class="avatar"><%= firstLetter %></div>--%>
 
 <%--                        <a class="nav-link" href="#">--%>
 <%--                            <i class="fas fa-user-circle  "></i>--%>
 <%--                        </a>--%>
                     </li>
                     <li>
-                        <h4 class="fonts">Welcome <%=session.getAttribute("username")%>!</h4>
+<%--                        <%--%>
+<%--                            String username = (String) session.getAttribute("username");--%>
+<%--                            char firstLetter = username.charAt(0);--%>
+<%--                        %>--%>
+<%--                        <div class="avatar"><%= firstLetter %></div>--%>
+
+
+
+
+                        <h4 class="fonts">Welcome <%=session.getAttribute("username")%></h4>
 
 
 

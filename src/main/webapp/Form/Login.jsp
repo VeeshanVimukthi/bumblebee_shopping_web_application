@@ -25,7 +25,9 @@
             <div class="col-12 col-md-8 col-lg-6">
                 <div class="border border-3 border-primary"></div>
                 <div class="card bg-white shadow-lg">
-                    <a href="../index.jsp">  <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="modal"
+                    <a href="../index.jsp">
+
+                        <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="modal"
                                                      style="position: absolute;top: 0; right: 0;"> </button> </a>
                     <div class="card-body p-5">
                         <form class="mb-3 mt-md-4" action="../login" method="post">

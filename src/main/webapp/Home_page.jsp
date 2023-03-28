@@ -73,6 +73,7 @@
 
                 <%@include file="./Include/Cards.jsp"%>
                 <%@include file="./Include/Marquee slider.jsp"%>
+
 <%--            <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">--%>
 <%--                <!-- Indicators -->--%>
 <%--                <ol class="carousel-indicators">--%>

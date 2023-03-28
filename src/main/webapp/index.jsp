@@ -11,8 +11,8 @@
 </head>
 <body>
 
-<% Connection conn= DBConnection.getConn();
-    out.print(conn);%>
+<%--<% Connection conn= DBConnection.getConn();--%>
+<%--    out.print(conn);%>--%>
 <%@include file="Include/Navbar.jsp"%>
 
 <%@include file="Home_page.jsp"%>
