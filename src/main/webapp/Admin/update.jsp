@@ -12,5 +12,36 @@
 </head>
 <body>
 <%@include file="admin_navigation.jsp"%>
+
+
+<h1>Update Product</h1>
+<form action="UpdateProductServlet" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="id" value="${product.id}">
+    <label for="name">Name:</label>
+    <input type="text" name="name" value="${product.name}">
+    <br><br>
+    <label for="description">Description:</label>
+    <textarea name="description">${product.description}</textarea>
+    <br><br>
+    <label for="category">Category:</label>
+    <input type="text" name="category" value="${product.category}">
+    <br><br>
+    <label for="price">Price:</label>
+    <input type="text" name="price" value="${product.price}">
+    <br><br>
+    <label for="image">Image:</label>
+    <input type="file" name="image">
+    <br><br>
+    <label for="dimensions">Dimensions:</label>
+    <input type="text" name="dimensions" value="${product.dimensions}">
+    <br><br>
+    <label for="weight">Weight:</label>
+    <input type="text" name="weight" value="${product.weight}">
+    <br><br>
+    <label for="color">Color:</label>
+    <input type="text" name="color" value="${product.color}">
+    <br><br>
+    <input type="submit" value="Update Product">
+</form>
 </body>
 </html>
