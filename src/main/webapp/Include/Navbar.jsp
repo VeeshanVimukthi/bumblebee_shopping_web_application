@@ -113,17 +113,14 @@
 <%--                            char firstLetter = username.charAt(0);--%>
 <%--                        %>--%>
 <%--                        <div class="avatar"><%= firstLetter %></div>--%>
-
-
-
-
                         <h4 class="fonts">Welcome <%=session.getAttribute("username")%></h4>
 
+                    </li>
 
-
-
-<%--                    <p>You are now logged in.</p>--%>
-<%--                    <a href="logout">Logout</a>--%>
+                    <li>
+                        <a class="nav-link" href="./Admin/AdminloginForm.jsp">
+                            <i class="fas fa-user-cog"></i>
+                        </a>
                     </li>
 
 
