@@ -124,6 +124,7 @@
 
 
 <%@include file="./Include/More_cards.jsp"%>
+<%--<jsp:include page="Admin/CARD.jsp"/>--%>
 
 
 

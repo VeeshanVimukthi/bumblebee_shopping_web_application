@@ -67,7 +67,7 @@
         <nav class="col-md-2 d-none d-md-block bg-light sidebar">
             <div class="sidebar-sticky">
                 <div class="text-center my-3">
-                    <img src="../Images/logo2.png" alt="Your Logo" height="50">
+                    <img src="${pageContext.request.contextPath}/Images/logo2.png" alt="Your Logo" height="50">
                     <h5 class="mt-3">Bumble Bee</h5>
                 </div>
                 <ul class="nav flex-column">
@@ -80,16 +80,16 @@
                             Products
                         </a>
                         <div class="dropdown-menu" aria-labelledby="productsDropdown">
-                            <a class="dropdown-item" href="insert.jsp">Insert Item</a>
-                            <a class="dropdown-item" href="update.jsp">Update </a>
-                            <a class="dropdown-item" href="Delete.jsp">Delete</a>
+                            <a class="dropdown-item" href="${pageContext.request.contextPath}/Admin/insert.jsp">Insert Item</a>
+                            <a class="dropdown-item" href="${pageContext.request.contextPath}/Admin/update.jsp">Update </a>
+                            <a class="dropdown-item" href="${pageContext.request.contextPath}/Admin/Delete.jsp">Delete</a>
                         </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="${pageContext.request.contextPath}/view-products">View</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Customers</a>
+                        <a class="nav-link" href="${pageContext.request.contextPath}/home-view">All product card</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Reports</a>

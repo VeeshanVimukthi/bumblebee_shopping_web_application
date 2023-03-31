@@ -54,19 +54,15 @@
                             <td>${product.description}</td>
                             <td>${product.category}</td>
                             <td>${product.price}</td>
-                            <td><img src="data:image/png;base64,${product.image}" alt="Product Image"></td>
-<%--                            <td><img src="data:image/jpeg;base64,${product.image}" /></td>--%>
-<%--                            <td><img height="100" src="path/to/image.jpg"></td>--%>
-<%--                            <td><img style="height: 100px" src="data:image/jpeg;base64,'product.$imageBase64.'"/></td>'--%>
-<%--                            <td><img style="height: 100px" src="data:image/jpeg;base64,${product.imageBase64}"/></td>--%>
+                            <td><img height="100" src="data:image/jpeg;base64,${product.imageBase64}" alt="${product.name}"></td>
                             <td>${product.dimensions}</td>
                             <td>${product.weight}</td>
                             <td>${product.color}</td>
                             <td><a href="delete-product?id=${product.id}">Delete</a></td>
-                            <td>
-                                <a href="${pageContext.request.contextPath}/seller-center/updateProduct.jsp?id=${product.id}"><i class="fa fa-pencil" style="color: black"></i></a>
-                                &nbsp;<a href="delete-product?id=${product.id}"><i class="fa fa-trash" style="color: red"></i></a>
-                            </td>
+<%--                            <td>--%>
+<%--                                <a href="${pageContext.request.contextPath}/seller-center/updateProduct.jsp?id=${product.id}"><i class="fa fa-pencil" style="color: black"></i></a>--%>
+<%--                                &nbsp;<a href="delete-product?id=${product.id}"><i class="fa fa-trash" style="color: red"></i></a>--%>
+<%--                            </td>--%>
                         </tr>
                     </c:forEach>
                     </tbody>

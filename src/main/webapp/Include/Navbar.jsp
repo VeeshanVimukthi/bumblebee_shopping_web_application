@@ -66,10 +66,10 @@
                         <a class="nav-link" href="./Admin/admin_navigation.jsp">Brands</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Contact.jsp">Contact Us</a>
+                        <a class="nav-link" href="home-view">Contact Us</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Services
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
