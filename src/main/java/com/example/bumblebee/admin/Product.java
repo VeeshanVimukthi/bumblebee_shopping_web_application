@@ -1,6 +1,7 @@
 package com.example.bumblebee.admin;
 
 import java.math.BigDecimal;
+import java.util.Base64;
 
 public class Product {
     private int id;
@@ -24,6 +25,13 @@ public class Product {
         this.weight = weight;
         this.color = color;
     }
+
+    public String getImageBase64() {
+        if (image == null) {
+            return null;
+        }
+        return Base64.getEncoder().encodeToString(image);
+}
 
     public int getId() {
         return id;

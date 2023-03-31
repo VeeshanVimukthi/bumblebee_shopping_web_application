@@ -8,8 +8,8 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-@WebServlet(name = "ViewProducts", value = "/view-products")
-public class ViewServlet extends HttpServlet {
+@WebServlet(name = "HomeView", value = "/home-view")
+public class HomeView extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private final ProductDAO productDAO = new ProductDAO();
 
@@ -18,7 +18,7 @@ public class ViewServlet extends HttpServlet {
         try {
             List<Product> products = productDAO.getAllProducts();
             request.setAttribute("products", products);
-            request.getRequestDispatcher("Admin/View.jsp").forward(request, response);
+            request.getRequestDispatcher("Admin/CARD.jsp").forward(request, response);
         } catch (SQLException e) {
             e.printStackTrace();
             // Handle the error case
