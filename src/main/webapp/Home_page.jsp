@@ -32,16 +32,6 @@
             </div>
             <div class="Category_list">
 
-<%--                <ul class=" ">--%>
-<%--                    <li class=" list-group-item list-group-item-action ">An item</li>--%>
-<%--                    <li class="list-group-item list-group-item-action">A second item</li>--%>
-<%--                    <li class="list-group-item list-group-item-action">A third item</li>--%>
-<%--                    <li class="list-group-item list-group-item-action">A fourth item</li>--%>
-<%--                    <li class="list-group-item list-group-item-action">And a fifth one</li>--%>
-<%--                    <li class="list-group-item list-group-item-action">And a fifth one</li>--%>
-<%--                    <li class="list-group-item list-group-item-action">And a fifth one</li>--%>
-<%--                    <li class="list-group-item list-group-item-action">And a fifth one</li>--%>
-<%--                </ul>--%>
     <div class="list-group">
 <%--        <a href="#" class="list-group-item list-group-item-action">--%>
 <%--            Active Item--%>
