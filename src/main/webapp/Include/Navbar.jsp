@@ -84,7 +84,7 @@
                 </form>
                 <ul class="navbar-nav" style="align-items: center;">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="viewCart">
                             <i class="fas fa-shopping-cart "></i>
                         </a>
                     </li>

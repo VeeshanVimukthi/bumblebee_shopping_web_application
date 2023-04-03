@@ -185,6 +185,9 @@
     </script>
 </head>
 <body>
+
+
+
 <div class="container-xl">
     <div class="row">
         <div class="col-md-12">
@@ -219,7 +222,7 @@
                                             </ul>
                                         </div>
                                         <p class="item-price">Rs: <b>${product.price}</b></p>
-                                        <a href="#" class="btn btn-primary">Add to Cart</a>
+                                        <a href="productdetails.jsp?id=${product.id}" class="btn btn-primary"> Add to Cart</a>
                                     </div>
                                 </div>
                             </div>
@@ -238,5 +241,7 @@
         </div>
     </div>
 </div>
+
+
 </body>
 </html>

@@ -69,15 +69,11 @@ public class ViewCart extends HttpServlet {
                 closeResources(conn, stmt, rs);
             }
 
-            BigDecimal total = ShoppingCart.getTotal(items);
-            request.setAttribute("items", items);
-            request.setAttribute("total", total); // Add the total price to the request
-
             // retrieve cart items from database
 
             session.setAttribute("cartItems", items);
 
-            request.getRequestDispatcher("user/viewCart.jsp").forward(request, response);
+            request.getRequestDispatcher("Customers/viewCart.jsp").forward(request, response);
         }
 
     }

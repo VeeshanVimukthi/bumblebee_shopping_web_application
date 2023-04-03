@@ -50,7 +50,7 @@
 
 </head>
 <body>
-<%--<%@include file="Include/Navbar.jsp"%>--%>
+<%@include file="Include/Navbar.jsp"%>
 
 <%
     // Get the product ID from the request parameter
@@ -128,7 +128,7 @@
 
 </div>
 </div>
-<%--<%@include file="Include/Footer.jsp"%>--%>
+<%@include file="Include/Footer.jsp"%>
 
 <script>
     const container = document.querySelector('.image-container');

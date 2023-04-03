@@ -28,7 +28,7 @@ public class AddToCart extends HttpServlet {
 
         HttpSession session = request.getSession();
         if (session.getAttribute("userEmail") == null) {
-            response.sendRedirect("login.jsp");
+            response.sendRedirect("Form/Login.jsp");
         }else{
 
             String userEmail = (String) session.getAttribute("userEmail");
@@ -60,7 +60,7 @@ public class AddToCart extends HttpServlet {
                     insertStmt.setInt(3, quantity);
                     insertStmt.executeUpdate();
                 }
-                response.sendRedirect("viewCart");
+                response.sendRedirect("Customers/viewCart.jsp");
             } catch (SQLException e) {
                 e.printStackTrace();
                 response.sendRedirect("error.jsp");
