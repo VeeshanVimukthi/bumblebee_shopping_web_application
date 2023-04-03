@@ -1,11 +1,10 @@
 package com.example.bumblebee.cart;
 
-
-
-
-
 import com.example.bumblebee.DBConnection;
 import com.example.bumblebee.admin.Product;
+import com.example.bumblebee.cart.ShoppingCart;
+import com.example.bumblebee.cart.ShoppingCartitem;
+
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -23,6 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static com.example.bumblebee.admin.Product.closeResources;
+
 
 
 @WebServlet("/viewCart")
@@ -69,12 +69,14 @@ public class ViewCart extends HttpServlet {
                 closeResources(conn, stmt, rs);
             }
 
+            BigDecimal total = ShoppingCart.getTotal(items);
+            request.setAttribute("items", items);
+            request.setAttribute("total", total); // Add the total price to the request
+
             // retrieve cart items from database
 
             session.setAttribute("cartItems", items);
 
             request.getRequestDispatcher("Customers/viewCart.jsp").forward(request, response);
-        }
-
-    }
-}
+  }
+}}

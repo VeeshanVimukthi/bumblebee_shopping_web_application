@@ -11,7 +11,7 @@
     <title>View Cart</title>
 </head>
 <body>
-<jsp:include page="../Include/Navbar.jsp" />
+<%--<jsp:include page="../Include/Navbar.jsp" />--%>
 
 <div class="container-fluid" style="max-width: 1200px;">
 <div style="text-align: center; margin-top: 1%; margin-bottom: 1%"><h1>Your Cart</h1></div>
@@ -37,7 +37,7 @@
                 <form action="reduceQuantity" method="post">
                     <input type="hidden" name="productId" value="${item.product.id}" />
                     <div class="d-flex">
-                    <input class="form-control" style="width: 80px" type="number" name="quantity" id="quantity" value="${item.quantity}" min="1" max="${item.product.stock}" />
+                    <input class="form-control" style="width: 80px" type="number" name="quantity" id="quantity" value="${item.quantity}" min="1"  />
                     <button class="btn" type="submit"><i class="fas fa-edit text-primary"></i></button>
                     </div>
                 </form>
@@ -54,7 +54,7 @@
 
     <tr>
         <td class="bg-dark" style="text-align: center; color: white" colspan="5"><h3>TOTAL</h3></td>
-        <td style="text-align: right" colspan="2"><b>LKR ${total}.00</b></td>
+        <td style="text-align: right" colspan="2"><b>LKR ${total}</b></td>
         <td></td>
     </tr>
 
@@ -74,7 +74,7 @@
 </div>
 </div>
 
-<jsp:include page="../Include/Footer.jsp" />
+<%--<jsp:include page="../Include/Footer.jsp" />--%>
 
 <script>
     let removeDialog = document.getElementById('remove-dialog');
