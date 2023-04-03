@@ -11,7 +11,7 @@
     <title>View Cart</title>
 </head>
 <body>
-<%--<jsp:include page="../Include/Navbar.jsp" />--%>
+<jsp:include page="../Include/Navbar.jsp" />
 
 <div class="container-fluid" style="max-width: 1200px;">
 <div style="text-align: center; margin-top: 1%; margin-bottom: 1%"><h1>Your Cart</h1></div>
@@ -74,7 +74,7 @@
 </div>
 </div>
 
-<%--<jsp:include page="../Include/Footer.jsp" />--%>
+<jsp:include page="../Include/Footer.jsp" />
 
 <script>
     let removeDialog = document.getElementById('remove-dialog');
