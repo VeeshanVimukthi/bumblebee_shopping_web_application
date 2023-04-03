@@ -11,6 +11,10 @@
 </head>
 <body>
 
+<%
+    response.sendRedirect("home-view");
+%>
+
 <% Connection conn= DBConnection.getConn();
     out.print(conn);%>
 

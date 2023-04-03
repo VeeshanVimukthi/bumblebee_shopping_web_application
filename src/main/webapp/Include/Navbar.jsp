@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Veeshan
@@ -10,8 +11,6 @@
 <head>
     <title>Title</title>
     <link rel="stylesheet" href="./CSS/Navbar.css">
-<%--    <script src="https://kit.fontawesome.com/c6b5381962.js" crossorigin="anonymous"></script>--%>
-<%--    <link rel="stylesheet" href="https://kit.fontawesome.com/c6b5381962.css" crossorigin="anonymous">--%>
 
 
 
@@ -92,28 +91,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="./Form/Login.jsp">Sign In</a>
                     </li>
-<%--                    <li class="nav-item">--%>
-<%--                        <a class="nav-link" href="#">Sign Out</a>--%>
-<%--                    </li>--%>
+
                     <li class="nav-item">
-<%--                        <%--%>
-<%--                            String username = (String) session.getAttribute("username");--%>
-<%--                            char firstLetter = username.charAt(0);--%>
-<%--                        %>--%>
-
-<%--                        <div class="avatar"><%= firstLetter %></div>--%>
-
-<%--                        <a class="nav-link" href="#">--%>
-<%--                            <i class="fas fa-user-circle  "></i>--%>
-<%--                        </a>--%>
                     </li>
                     <li>
-<%--                        <%--%>
-<%--                            String username = (String) session.getAttribute("username");--%>
-<%--                            char firstLetter = username.charAt(0);--%>
-<%--                        %>--%>
-<%--                        <div class="avatar"><%= firstLetter %></div>--%>
-                        <h4 class="fonts">Welcome <%=session.getAttribute("username")%></h4>
+
+                        <h4 class="fonts">Welcome <%=session.getAttribute("userEmail")%> <%=session.getAttribute("username")%></h4>
 
                     </li>
 

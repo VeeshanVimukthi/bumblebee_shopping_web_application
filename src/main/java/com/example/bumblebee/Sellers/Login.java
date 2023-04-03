@@ -68,9 +68,13 @@ public class Login extends HttpServlet {
 
             if (rs.next()) {
                 String hashedPassword = rs.getString("password");
+                String UserEmail = rs.getString("email");
+
                 if (hashedPassword.equals(hashPassword(password))) {
                     HttpSession session = request.getSession();
                     session.setAttribute("username", username);
+
+                    session.setAttribute("userEmail", UserEmail);
                     response.sendRedirect("./index.jsp");
                 } else {
                     response.sendRedirect("login.jsp?error=invalid_password");
@@ -78,6 +82,9 @@ public class Login extends HttpServlet {
             } else {
                 response.sendRedirect("login.jsp?error=invalid_username");
             }
+
+
+
         } catch (SQLException e) {
             e.printStackTrace();
             response.sendRedirect("error.jsp");

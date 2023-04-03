@@ -18,7 +18,7 @@ public class HomeView extends HttpServlet {
         try {
             List<Product> products = productDAO.getAllProducts();
             request.setAttribute("products", products);
-            request.getRequestDispatcher("Admin/CARD.jsp").forward(request, response);
+            request.getRequestDispatcher("Home_page.jsp").forward(request, response);
         } catch (SQLException e) {
             e.printStackTrace();
             // Handle the error case

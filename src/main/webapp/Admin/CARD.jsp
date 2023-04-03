@@ -4,7 +4,7 @@
 <html>
 <head>
 
-    <%@include file="admin_navigation.jsp"%>
+<%--    <%@include file="admin_navigation.jsp"%>--%>
     <title>Product List</title>
     <style>
         /* Add some basic styles for the card viewer */
@@ -51,13 +51,26 @@
         .card .actions a:hover {
             background-color: #0077c2;
         }
+
+        .add-to-cart-btn {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #218838;
+        }
     </style>
 </head>
 <body>
 <h1>Product List</h1>
 <c:forEach var="product" items="${products}">
     <div class="card">
-        <img src="data:image/jpeg;base64,${product.imageBase64}" alt="${product.name}">
+        <img height="100" src="data:image/jpeg;base64,${product.imageBase64}" alt="${product.name}">
         <h3>${product.name}</h3>
         <p>${product.description}</p>
         <p><strong>Category:</strong> ${product.category}</p>
@@ -66,9 +79,19 @@
         <p><strong>Color:</strong> ${product.color}</p>
         <div class="price">${product.price}</div>
         <div class="actions">
-            <a href="edit-product?id=${product.id}">Edit</a>
-            <a href="?deleteProduct?id=${product.id}">Delete</a>
+            <a href="productdetails.jsp?id=${product.id}">Add cart</a>
+<%--            <form action="add-to-cart" method="post">--%>
+<%--                <input type="hidden" name="productId" value="${product.id}">--%>
+<%--                <button type="submit" class="btn btn-success add-to-cart-btn">Add to Cart</button>--%>
+<%--            </form>--%>
         </div>
+<%--        <div class="actions">--%>
+<%--            <a href="edit-product?id=${product.id}">Edit</a>--%>
+<%--            <a href="?deleteProduct?id=${product.id}">Delete</a>--%>
+<%--        </div>--%>
+
+
+
     </div>
 </c:forEach>
 </body>

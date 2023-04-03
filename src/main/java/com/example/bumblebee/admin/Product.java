@@ -1,6 +1,9 @@
 package com.example.bumblebee.admin;
 
+import com.example.bumblebee.DBConnection;
+
 import java.math.BigDecimal;
+import java.sql.*;
 import java.util.Base64;
 
 public class Product {
@@ -24,6 +27,63 @@ public class Product {
         this.dimensions = dimensions;
         this.weight = weight;
         this.color = color;
+    }
+
+    public static Product getProductById(int productId) {
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+        Product product = null;
+        try {
+            conn = DBConnection.getConn();
+            stmt = conn.prepareStatement("SELECT * FROM products WHERE id = ?");
+            stmt.setInt(1, productId);
+            rs = stmt.executeQuery();
+            if (rs.next()) {
+                int id = rs.getInt("id");
+                String name = rs.getString("name");
+                String description = rs.getString("description");
+                String category = rs.getString("category");
+                BigDecimal price = rs.getBigDecimal("price");
+                byte[] image = rs.getBytes("image");
+
+                String dimensions = rs.getString("dimensions");
+                String weight = rs.getString("weight");
+                String color = rs.getString("color");
+//                int stock = rs.getInt("stock");
+                product = new Product(id, name, description, category, price, image, dimensions, weight, color);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            closeResources(conn, stmt, rs);
+        }
+        return product;
+    }
+    public static void closeResources(Connection conn, Statement stmt, ResultSet rs) {
+        try {
+            if (rs != null) {
+                rs.close();
+            }
+        } catch (SQLException e) {
+            System.out.println("Error closing ResultSet: " + e.getMessage());
+        }
+
+        try {
+            if (stmt != null) {
+                stmt.close();
+            }
+        } catch (SQLException e) {
+            System.out.println("Error closing Statement: " + e.getMessage());
+        }
+
+        try {
+            if (conn != null) {
+                conn.close();
+            }
+        } catch (SQLException e) {
+            System.out.println("Error closing Connection: " + e.getMessage());
+        }
     }
 
     public String getImageBase64() {
