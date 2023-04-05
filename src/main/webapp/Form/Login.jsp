@@ -37,8 +37,8 @@
 
 
                             <div class="mb-3">
-                                <label for="username" class="form-label ">User Name</label>
-                                <input type="email" class="form-control" name="username" id="username" placeholder="User name">
+                                <label for="username" class="form-label ">Email</label>
+                                <input type="email" class="form-control" name="username" id="username" placeholder="Email">
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label ">Password</label>

@@ -29,18 +29,7 @@
                         <form class="mb-3 mt-md-4" action="../register" method="post">
                             <h2 class="fw-bold mb-2 text-uppercase ">Registration Form </h2>
                             <p class=" mb-5">Please enter your Accurate data !</p>
-<%--                            <div class="mb-3">--%>
-<%--                                <div class="dropdown">--%>
-<%--                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">--%>
-<%--                                        Choose an option--%>
-<%--                                    </button>--%>
-<%--                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">--%>
-<%--                                        <li><a class="dropdown-item" href="#">Option 1</a></li>--%>
-<%--                                        <li><a class="dropdown-item" href="#">Option 2</a></li>--%>
-<%--                                        <li><a class="dropdown-item" href="#">Option 3</a></li>--%>
-<%--                                    </ul>--%>
-<%--                                </div>--%>
-<%--                            </div>--%>
+
                             <div class="mb-3">
                                 <label for="username" class="form-label ">User Name</label>
                                 <input type="text" class="form-control" name="username" id="username" placeholder="User name">
@@ -49,23 +38,19 @@
                                 <label for="email" class="form-label ">Email address</label>
                                 <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com">
                             </div>
+<%--                            <div class="mb-3">--%>
+<%--                                <label for="numbers" class="form-label ">Contact Number</label>--%>
+<%--                                <input type="number" class="form-control" name="numbers" id="numbers" placeholder="94 00 000 000">--%>
+<%--                            </div>--%>
+<%--                            <div class="mb-3">--%>
+<%--                                <label for="address" class="form-label ">Address</label>--%>
+<%--                                <input type="address" class="form-control" name="address" id="address" placeholder="Address">--%>
+<%--                            </div>--%>
                             <div class="mb-3">
                                 <label for="password" class="form-label ">Password</label>
                                 <input type="password" class="form-control" name="password" id="password" placeholder="*******">
                             </div>
-<%--                            <div class="mb-3">--%>
-<%--                                <label for="password" class="form-label ">Re-Password</label>--%>
-<%--                                <input type="password" class="form-control" name="password" id="re-password" placeholder="*******">--%>
-<%--                            </div>--%>
-<%--                            <div class="mb-3">--%>
-<%--                                <label for="gender" class="form-label">Gender</label>--%>
-<%--                                <select class="form-select" id="gender" required>--%>
-<%--                                    <option value="" disabled selected>Select your gender</option>--%>
-<%--                                    <option value="male">Male</option>--%>
-<%--                                    <option value="female">Female</option>--%>
-<%--                                    <option value="other">Other</option>--%>
-<%--                                </select>--%>
-<%--                            </div>--%>
+
                             <p class="small"><a class="text-primary" href="forget-password.html">Forgot password?</a></p>
                             <div class="mb-3 form-check">
                                 <input type="checkbox" class="form-check-input" id="remember">

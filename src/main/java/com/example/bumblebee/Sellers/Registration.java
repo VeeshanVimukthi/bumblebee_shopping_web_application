@@ -81,15 +81,19 @@ public class Registration extends HttpServlet {
         String username = request.getParameter("username");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
+//        String number = request.getParameter("numbers");
+//        String address = request.getParameter("address");
 
         // Hash the password using SHA-256 algorithm
         String hashedPassword = hashPassword(password);
 
         try (Connection conn = DBConnection.getConn()) {
-            PreparedStatement pstmt = conn.prepareStatement("INSERT INTO customers (username, email, password) VALUES (?, ?, ?)");
+            PreparedStatement pstmt = conn.prepareStatement("INSERT INTO customers (username, email, password) VALUES (?, ?, ? )");
             pstmt.setString(1, username);
             pstmt.setString(2, email);
             pstmt.setString(3, hashedPassword);
+//            pstmt.setString(4, address);
+//            pstmt.setString(5, number);
             pstmt.executeUpdate();
             conn.close();
 

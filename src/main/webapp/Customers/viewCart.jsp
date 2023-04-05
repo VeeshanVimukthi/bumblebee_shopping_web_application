@@ -53,7 +53,7 @@
     </c:forEach>
 
     <tr>
-        <td class="bg-dark" style="text-align: center; color: white" colspan="5"><h3>TOTAL</h3></td>
+        <td class="bg-warning" style="text-align: center; color: black" colspan="5"><h3>TOTAL</h3></td>
         <td style="text-align: right" colspan="2"><b>LKR ${total}</b></td>
         <td></td>
     </tr>
@@ -61,7 +61,7 @@
 </table>
 
     <div style="text-align:right; align-content: end; justify-content: right; margin-bottom: 1%">
-        <a class="text" href="orderConfirmation"><button class="btn" style="background-color: #a2822a; color: white"><b>Checkout</b></button></a>
+        <a class="text" href="orderConfirmation"><button class="btn" style="background-color: #FFD400; color: black"><b>Checkout</b></button></a>
     </div>
 
 

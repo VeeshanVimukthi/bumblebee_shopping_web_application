@@ -1,5 +1,5 @@
 <%@ page import="java.sql.*" %>
-<%@ page import="com.example.projectone.DBConnection" %>
+<%@ page import="com.example.bumblebee.DBConnection" %>
 <%--
   Created by IntelliJ IDEA.
   User: itzme

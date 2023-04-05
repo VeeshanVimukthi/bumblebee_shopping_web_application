@@ -15,27 +15,6 @@
 </head>
 <body>
 
-<%--<div class="container" style="max-width: 500px; margin-top: 120px" >--%>
-
-
-<%--    <h1> Administrator Login</h1>--%>
-<%--    --%>
-<%--    <form action="login" method="POST">--%>
-<%--       --%>
-<%--        <div class="mb-3">--%>
-<%--            <label for="username" class="form-label">Username:</label>--%>
-<%--            <input type="text" class="form-control" id="username" name="username">--%>
-<%--        </div>--%>
-<%--        <div class="mb-3">--%>
-<%--            <label for="password" class="form-label">Password:</label>--%>
-<%--            <input type="password" class="form-control" id="password" name="password">--%>
-<%--        </div>--%>
-<%--        <button type="submit" class="btn btn-primary">Login</button>--%>
-<%--    </form>--%>
-<%--</div>--%>
-<%--</body>--%>
-
-
 <div class="vh-100 d-flex justify-content-center align-items-center">
     <div class="container">
         <div class="row d-flex justify-content-center">
