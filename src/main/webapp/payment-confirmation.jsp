@@ -31,7 +31,7 @@
 </head>
 <body>
 <div class="container">
-    <h1>Payment Successful!</h1>
+    <h1 style="">Payment Successful!</h1>
     <p>You will be redirected to the homepage in <span id="countdown">6</span> seconds.</p>
 </div>
 

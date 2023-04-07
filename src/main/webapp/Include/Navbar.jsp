@@ -78,8 +78,8 @@
                         </div>
                     </li>
                 </ul>
-                <form class="form d-flex my-2 my-lg-0 mr-3">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <form class="form d-flex my-2 my-lg-0 mr-3" action="search" method="get">
+                    <input class="form-control mr-sm-2" type="search" id="keyword" name="keyword" placeholder="Search" aria-label="Search">
                     <button class="btns " type="submit"> <i class="fa fa-search"></i></button>
                 </form>
                 <ul class="navbar-nav" style="align-items: center;">
@@ -90,6 +90,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./Form/Login.jsp">Sign In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="user-logout">Log Out</a>
                     </li>
 
                     <li class="nav-item">

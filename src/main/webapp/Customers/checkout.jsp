@@ -20,9 +20,37 @@
 <%--<jsp:include page="../include/navbar.jsp" />--%>
 
 <div class="container-fluid" style="max-width: 1200px; margin-bottom: 1%">
-    <div style="text-align: center; margin-top: 1%; margin-bottom: 1%"><h1>Order Checkout</h1></div>
+    <div style="text-align: center; background: #7ac400; margin-top: 1%; margin-bottom: 1%"><h1>Order Checkout</h1></div>
     <form action="processOrder" method="post">
         <div class="row">
+            <div class="col-md-6">
+                <table class="table" style="border: 1px solid black; margin: 10px">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th>Product</th>
+                        <th>Image</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+                    </tr>
+                    </thead>
+                    <c:forEach items="${items}" var="item">
+                        <tr>
+                            <td>${item.product.name}</td>
+                            <td><img style="height: 100px" src="data:image/jpeg;base64,${item.product.imageBase64}"/></td>
+                            <td>LKR ${item.product.price}.00</td>
+                            <td>${item.quantity}</td>
+                            <td>LKR ${item.getSubtotal()}.00</td>
+                        </tr>
+                    </c:forEach>
+                    <tr>
+                        <td class="bg-warning" style="text-align: center; color: white" colspan="3"><h3>Total</h3></td>
+                        <td style="text-align: right" colspan="2"><b>LKR ${total}.00</b></td>
+                        <input type="hidden" id="total" value="${total}" name="total">
+                    </tr>
+                </table>
+                <button type="submit" class="btn btn-success">Confirm Order</button>
+            </div>
             <div class="col-md-6">
                 <div class="form-group">
 
@@ -71,34 +99,7 @@
                 </fieldset>
 
             </div>
-            <div class="col-md-6">
-                <table class="table">
-                    <thead class="thead-dark">
-                    <tr>
-                        <th>Product</th>
-                        <th>Image</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                        <th>Subtotal</th>
-                    </tr>
-                    </thead>
-                    <c:forEach items="${items}" var="item">
-                        <tr>
-                            <td>${item.product.name}</td>
-                            <td><img style="height: 100px" src="data:image/jpeg;base64,${item.product.imageBase64}"/></td>
-                            <td>LKR ${item.product.price}.00</td>
-                            <td>${item.quantity}</td>
-                            <td>LKR ${item.getSubtotal()}.00</td>
-                        </tr>
-                    </c:forEach>
-                    <tr>
-                        <td class="bg-dark" style="text-align: center; color: white" colspan="3"><h3>Total</h3></td>
-                        <td style="text-align: right" colspan="2"><b>LKR ${total}.00</b></td>
-                        <input type="hidden" id="total" value="${total}" name="total">
-                    </tr>
-                </table>
-                <button type="submit" class="btn btn-warning">Confirm Order</button>
-            </div>
+
         </div>
     </form>
 </div>

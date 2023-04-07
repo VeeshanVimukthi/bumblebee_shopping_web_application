@@ -14,8 +14,8 @@
 <jsp:include page="../Include/Navbar.jsp" />
 
 <div class="container-fluid" style="max-width: 1200px;">
-<div style="text-align: center; margin-top: 1%; margin-bottom: 1%"><h1>Your Cart</h1></div>
-<table class="table" border="1">
+<div style="text-align: center; background: #7ac400; margin-top: 1%; margin-bottom: 1%"><h1>Your Cart</h1></div>
+<table class="table" border="1" style="border-radius: 10px">
     <thead class="thead-dark">
     <tr>
         <th>Product</th>
@@ -28,7 +28,7 @@
     </tr>
     </thead>
     <c:forEach items="${items}" var="item">
-        <tr>
+        <tr class="bg-info" style="border-radius: 10px">
             <td>${item.product.name}</td>
             <td><img style="height: 100px" src="data:image/jpeg;base64,${item.product.imageBase64}"/></td>
             <td>${item.product.description}</td>
@@ -61,7 +61,7 @@
 </table>
 
     <div style="text-align:right; align-content: end; justify-content: right; margin-bottom: 1%">
-        <a class="text" href="orderConfirmation"><button class="btn" style="background-color: #FFD400; color: black"><b>Checkout</b></button></a>
+        <a class="text " href="orderConfirmation"><button class="btn" style="background-color: #17c42e; color: black"><b>Checkout</b></button></a>
     </div>
 
 

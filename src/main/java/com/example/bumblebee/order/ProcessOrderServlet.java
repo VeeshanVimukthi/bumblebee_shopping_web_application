@@ -159,12 +159,7 @@ public class ProcessOrderServlet extends HttpServlet {
                     statement.setBigDecimal(4, cartItem.getProduct().getPrice());
                     statement.executeUpdate();
 
-                    // update product stock
-                    sql = "UPDATE products SET stock = stock - ? WHERE id = ?";
-                    statement = conn.prepareStatement(sql);
-                    statement.setInt(1, cartItem.getQuantity());
-                    statement.setInt(2, cartItem.getProduct().getId());
-                    statement.executeUpdate();
+
 
                     sql = "DELETE FROM cart WHERE user_email = ? AND product_id = ?";
                     statement = conn.prepareStatement(sql);
